@@ -1,11 +1,14 @@
 # Start Azure VMs Managed Identity
 
+With the announcement that the Azure Automation Run As accounts and Classic Run As accounts will be retired, I've created a new project using the same overall process from the "Start Azure V2 VMs" repository. This runbook utilizes the Az cmdlets (vs. the legacy AzureRM cmdlets), along with a managed identity.
+
 DESCRIPTION 
+
 This runbook connects to Azure and starts all VMs in an Azure subscription, a resource group, or a single named VM.
 You can attach a recurring schedule to this runbook to run it at a specific time. 
 
 REQUIRED
-1. A Managed Identity asset (see Automation Account > Account Settings > Identity...) with RBAC permissions to start VMs.
+- A Managed Identity asset (see Automation Account > Account Settings > Identity...) with RBAC permissions to start VMs.
 
 OPTIONAL
 
@@ -27,9 +30,7 @@ LAST EDIT
 - 2023-08-21
 
 RELEASE NOTES
-- 2016-05-09 First release
-- 2016-10-22 Handle changes to the output object properties from Start-AzureRmVm
-- 2023-06-20 Updated with Managed Identity
+- 2023-06-20 Updated from "[Start Azure V2 VMs](https://github.com/azureautomation/start-azure-v2-vms)" with Managed Identity
 - 2023-08-21 Published to GitHub
 
 
